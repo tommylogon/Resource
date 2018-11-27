@@ -1,0 +1,46 @@
+﻿@page
+@model Resource.Pages.Customers.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustomerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Adress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Adress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.OrgNr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.OrgNr)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Customer.CustomerID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

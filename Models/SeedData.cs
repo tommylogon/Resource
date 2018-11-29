@@ -2,7 +2,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 
@@ -32,7 +31,7 @@ namespace Resource.Models
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
                     connection.Open();
-                    SqlCommand querry = new SqlCommand("SELECT  CUSTOMER.OBJ_NO, CUSTOMER.CUSTOMER_NAME, ADDRESS.ADDRESS_1, CONTACT.MOBILE_PHONE_NO, CUSTOMER.ORGANIZATION_NO, CUSTOMER.OBJ_DATE FROM ADDRESS INNER JOIN MACHINE ON ADDRESS.SOURCE_OBJ_NO = MACHINE.CUSTOMER_OBJ_NO INNER JOIN CUSTOMER on MACHINE.CUSTOMER_OBJ_NO = CUSTOMER.OBJ_NO INNER JOIN DOCUMENT on DOCUMENT.SOURCE_OBJ_NO = MACHINE.OBJ_NO INNER JOIN CONTACT on CUSTOMER.OBJ_NO = CONTACT.OBJ_NO group by CUSTOMER.OBJ_NO, CUSTOMER.CUSTOMER_NAME, ADDRESS.ADDRESS_1, CONTACT.MOBILE_PHONE_NO, CUSTOMER.ORGANIZATION_NO, CUSTOMER.OBJ_DATE ", connection);
+                    SqlCommand querry = new SqlCommand("SELECT  CUSTOMER.OBJ_NO, CUSTOMER.CUSTOMER_NAME, ADDRESS.ADDRESS_1,ADDRESS.ADDRESS_2, ADDRESS.POSTAL_CODE, ADDRESS.DESCRIPTION, CONTACT.MOBILE_PHONE_NO, CUSTOMER.ORGANIZATION_NO, CUSTOMER.OBJ_DATE FROM ADDRESS INNER JOIN MACHINE ON ADDRESS.SOURCE_OBJ_NO = MACHINE.CUSTOMER_OBJ_NO INNER JOIN CUSTOMER on MACHINE.CUSTOMER_OBJ_NO = CUSTOMER.OBJ_NO INNER JOIN DOCUMENT on DOCUMENT.SOURCE_OBJ_NO = MACHINE.OBJ_NO INNER JOIN CONTACT on CUSTOMER.OBJ_NO = CONTACT.OBJ_NO group by CUSTOMER.OBJ_NO, CUSTOMER.CUSTOMER_NAME, ADDRESS.ADDRESS_1,ADDRESS.ADDRESS_2, ADDRESS.POSTAL_CODE, ADDRESS.DESCRIPTION, CONTACT.MOBILE_PHONE_NO, CUSTOMER.ORGANIZATION_NO, CUSTOMER.OBJ_DATE", connection);
 
                     using (SqlDataReader reader = querry.ExecuteReader())
                     {
@@ -47,9 +46,18 @@ namespace Resource.Models
 
                                     newCustomer.CustomerID = reader.GetValue(0).ToString();
                                     newCustomer.CustomerName = reader.GetValue(1).ToString();
-                                    newCustomer.Adress = reader.GetValue(2).ToString();
-                                    newCustomer.Phone = reader.GetValue(3).ToString();
-                                    newCustomer.OrgNr = reader.GetValue(4).ToString();
+                                    if (!String.IsNullOrEmpty(reader.GetValue(2).ToString()))
+                                    {
+                                        newCustomer.Adress = reader.GetValue(2).ToString();
+                                    }
+                                    else
+                                    {
+                                        newCustomer.Adress = reader.GetValue(3).ToString();
+                                    }
+                                    newCustomer.PostalNr = reader.GetValue(4).ToString();
+                                    newCustomer.PostalAdress = reader.GetValue(5).ToString();
+                                    newCustomer.Phone = reader.GetValue(6).ToString();
+                                    newCustomer.OrgNr = reader.GetValue(7).ToString();
 
                                     context.Customer.Add(newCustomer);
                                 }

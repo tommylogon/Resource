@@ -24,6 +24,19 @@
         <dd>
             @Html.DisplayFor(model => model.Customer.Adress)
         </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.PostalAdress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.PostalAdress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.PostalNr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Customer.PostalNr)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Customer.Phone)
         </dt>
@@ -37,7 +50,7 @@
             @Html.DisplayFor(model => model.Customer.OrgNr)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="Customer.CustomerID" />
         <input type="submit" value="Delete" class="btn btn-default" /> |

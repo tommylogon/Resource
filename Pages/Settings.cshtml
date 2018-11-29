@@ -1,0 +1,14 @@
+﻿@page
+@model Resource.Pages.SettingsModel
+@{
+    ViewData["Title"] = "Settings";
+}
+
+<h2>Settings</h2>
+<form>
+    <div> DataSource: <input type="text" name="DataSource" /> </div>
+    <div>UserID: <input type="text" name="UserID" /></div>
+    <div>Password: <input type="password" name="Password" /></div>
+    <div>InitialCatalog: <input type="text" name="InitialCatalog" /></div>
+    <div><input type="submit" value="Connect" /></div>
+</form>

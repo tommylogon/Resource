@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using Resource.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Resource.Models;
 
 namespace Resource.Pages.Customers
 {
@@ -18,11 +17,22 @@ namespace Resource.Pages.Customers
             _context = context;
         }
 
-        public IList<Customer> Customer { get;set; }
+        public IList<Customer> Customer { get; set; }
+        public string SearchString { get; set; }
+        public string SelectedName { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
-            Customer = await _context.Customer.ToListAsync();
+            var customers = from c in _context.Customer
+                            select c;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                customers = customers.Where(s => s.CustomerName.Contains(searchString));
+            }
+
+            Customer = await customers.ToListAsync();
+            SearchString = searchString;
         }
     }
 }

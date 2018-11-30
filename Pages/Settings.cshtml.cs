@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using Resource.Models;
 
 namespace Resource.Pages
@@ -14,6 +15,8 @@ namespace Resource.Pages
         public string UserID { get; set; }
         public string Password { get; set; }
         public string InitialCatalog { get; set; }
+
+        private readonly IConfiguration _config;
 
         public void OnGet()
         {
@@ -28,6 +31,11 @@ namespace Resource.Pages
                 Password = Request.Form["Password"];
                 InitialCatalog = Request.Form["InitialCatalog"];
             }
+        }
+
+        public SettingsModel(IConfiguration config)
+        {
+            _config = config;
         }
     }
 }

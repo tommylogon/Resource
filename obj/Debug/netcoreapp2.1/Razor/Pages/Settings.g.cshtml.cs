@@ -56,7 +56,7 @@ using Resource;
             WriteLiteral("\r\n<h2>Settings</h2>\r\n");
             EndContext();
             BeginContext(109, 359, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "910e6b19348840a0a6e665151c5c7214", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50f0e6a90d424b92a193681ca27e599c", async() => {
                 BeginContext(129, 332, true);
                 WriteLiteral(@"
     <div> DataSource: <input type=""text"" name=""DataSource"" /> </div>

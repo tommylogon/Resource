@@ -13,7 +13,7 @@ namespace Resource
     public class Startup
     {
         private IHostingEnvironment Env { get; }
-        public IConfiguration Config { get; }
+        private IConfiguration Config { get; }
         private ILoggerFactory LoggerFactory { get; }
 
         public Startup(IHostingEnvironment env, IConfiguration config, ILoggerFactory loggerFactory)

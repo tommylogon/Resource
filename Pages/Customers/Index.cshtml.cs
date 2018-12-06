@@ -12,7 +12,7 @@ namespace Resource.Pages.Customers
     {
         private readonly Resource.Models.ResourceContext _context;
 
-        public IndexModel(Resource.Models.ResourceContext context)
+        public IndexModel(ResourceContext context)
         {
             _context = context;
         }

@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
-using Resource.Models;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json.Linq;
+using Resource.Models;
+using System;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Resource.Pages
 {
     public class SettingsModel : PageModel
     {
         public string DataSource { get; set; }
+        public string Trusted { get; set; }
         public string UserID { get; set; }
         public string Password { get; set; }
         public string InitialCatalog { get; set; }
+
         public Setting Settings { get; set; }
+
         private IHostingEnvironment _env;
         private IConfiguration _config;
 
@@ -35,10 +35,25 @@ namespace Resource.Pages
             if (Request.HasFormContentType)
             {
                 DataSource = Request.Form["DataSource"];
-                UserID = Request.Form["UserID"];
-                Password = Request.Form["Password"];
+                Trusted = Request.Form["Trusted"];
+                if (Trusted == "off")
+                {
+                    UserID = Request.Form["UserID"];
+                    Password = Request.Form["Password"];
+                }
+
                 InitialCatalog = Request.Form["InitialCatalog"];
-                string connectionString = "Data Source=" + DataSource + @"\" + InitialCatalog + ";User ID=" + UserID + ";Password=" + Password + ";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                string connectionString = "";
+                if (Trusted == "on")
+                {
+                    connectionString = "server = " + DataSource + "; Database = " + InitialCatalog + "; Trusted_Connection=True;MultipleActiveResultSets=true";
+                }
+                else
+                {
+                    connectionString = "server=" + DataSource + ";Database=" + InitialCatalog + "; User ID=" + UserID + ";Password=" + Password + ";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+                }
+
+                
 
                 JObject jsonFile = JObject.Parse(System.IO.File.ReadAllText("appsettings.json"));
 
@@ -60,6 +75,9 @@ namespace Resource.Pages
                     try
                     {
                         connection.Open();
+
+                        ViewData["ConnectionTrue"] = "true";
+                        ViewData["ConnString"] = Settings.ConnectionStrings;
                     }
                     catch (Exception ex)
                     {

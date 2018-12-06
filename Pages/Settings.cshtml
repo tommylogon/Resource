@@ -2,14 +2,83 @@
 @model Resource.Pages.SettingsModel
 @{
     ViewData["Title"] = "Settings";
+    Layout = "~/Pages/test/Themetest.cshtml";
 }
-
+<script type="text/javascript">
+    function trustedConnection() {
+        if ($('#ck_trust').is(":checked"))
+            $("#UseAndPass").hide();
+        else
+            $("#UseAndPass").show();
+    }
+</script>
 <h2>Settings</h2>
 <h3>Connected to: @ViewData["config"]</h3>
-<form method="post">
+
+<div class="container">
+    <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Connect to DB</div>
+        <div class="card-body">
+            <form method="post">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-label-group">
+                                <input type="text" name="DataSource" class="form-control" placeholder="DataSource" required="required" autofocus="autofocus">
+                                <label for="DataSource">Data Source</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-label-group">
+                                <input type="text" name="InitialCatalog" class="form-control" placeholder="InitialCatalog" required="required">
+                                <label for="InitialCatalog">Initial Catalog</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-label-group">
+                        <input type="checkbox" name="Trusted" class="form-control"/>
+                        <label for="UserID">User ID</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            <div class="form-label-group">
+                                <input type="Text" name="UserID" class="form-control" placeholder="User ID" >
+                                <label for="UserID">User ID</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <div class="form-label-group">
+                                <input type="password" name="inputPassword" class="form-control" placeholder="Password" >
+                                <label for="inputPassword">Password</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a class="btn btn-primary btn-block" href="login.html">Register</a>
+            </form>
+            <div class="text-center">
+                <a class="d-block small mt-3" href="login.html">Login Page</a>
+                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form class="form" method="post">
     <div> DataSource: <input type="text" name="DataSource" /> </div>
-    <div>UserID: <input type="text" name="UserID" /></div>
-    <div>Password: <input type="password" name="Password" /></div>
+    <div>
+        Trusted: <input type="checkbox" name="Trusted" id="ck_trust" onchange="trustedConnection()" />
+    </div>
+    <div id="UseAndPass">
+        <div>UserID: <input type="text" name="UserID" /></div>
+        <div>Password: <input type="password" name="Password" /></div>
+    </div>
     <div>InitialCatalog: <input type="text" name="InitialCatalog" /></div>
     <div><input type="submit" value="Connect" /></div>
 </form>
@@ -17,5 +86,11 @@
 {
     <div class="alert alert-danger">
         <strong>Error!</strong>@ViewData.ModelState["Error"].Errors.First().ErrorMessage
+    </div>
+}
+@if ((string)ViewData["ConnectionTrue"] == "true")
+{
+    <div class="alert alert-success">
+        <strong>Success!</strong>@ViewData["ConnString"].ToString() connected sucsessfully.
     </div>
 }

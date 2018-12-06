@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Resource.Models
 {
@@ -9,9 +6,9 @@ namespace Resource.Models
     {
         public string AllowedHosts { get; set; }
         public Dictionary<string, string> ConnectionStrings { get; set; }
-        public Logging logging { get; set; }
+        public Loggings Logging { get; set; }
 
-        public class Logging
+        public class Loggings
         {
             public static Dictionary<string, string> LogLevel { get; set; }
         }

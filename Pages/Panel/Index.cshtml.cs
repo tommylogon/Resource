@@ -32,7 +32,7 @@ namespace Resource.Pages.test
                 customers = customers.Where(s => s.CustomerName.Contains(searchString));
             }
 
-            Customer = await customers.ToListAsync();
+            //Customer = await customers.ToListAsync();
             SearchString = searchString;
         }
     }

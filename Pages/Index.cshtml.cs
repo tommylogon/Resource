@@ -6,6 +6,7 @@ namespace Resource.Pages
     {
         public void OnGet()
         {
+            Response.Redirect("Panel/index");
         }
     }
 }

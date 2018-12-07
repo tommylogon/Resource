@@ -20,8 +20,6 @@ namespace Resource.Pages
         public string Password { get; set; }
         public string InitialCatalog { get; set; }
 
-        public Setting Settings { get; set; }
-
         private IHostingEnvironment _env;
         private IConfiguration _config;
 
@@ -53,15 +51,13 @@ namespace Resource.Pages
                     connectionString = "server=" + DataSource + ";Database=" + InitialCatalog + "; User ID=" + UserID + ";Password=" + Password + ";Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
                 }
 
-                
-
                 JObject jsonFile = JObject.Parse(System.IO.File.ReadAllText("appsettings.json"));
 
-                Settings = jsonFile.ToObject<Setting>();
+                Program.Settings = jsonFile.ToObject<Setting>();
 
-                Settings.ConnectionStrings["ResourceContext"] = connectionString;
+                Program.Settings.ConnectionStrings["ResourceContext"] = connectionString;
 
-                JObject newJson = (JObject)JToken.FromObject(Settings);
+                JObject newJson = (JObject)JToken.FromObject(Program.Settings);
 
                 using (StreamWriter file = System.IO.File.CreateText("appsettings.json"))
                 using (JsonTextWriter writer = new JsonTextWriter(file))
@@ -70,14 +66,14 @@ namespace Resource.Pages
                     newJson.WriteTo(writer);
                 }
 
-                using (var connection = new SqlConnection(Settings.ConnectionStrings["ResourceContext"]))
+                using (var connection = new SqlConnection(Program.Settings.ConnectionStrings["ResourceContext"]))
                 {
                     try
                     {
                         connection.Open();
 
                         ViewData["ConnectionTrue"] = "true";
-                        ViewData["ConnString"] = Settings.ConnectionStrings;
+                        ViewData["ConnString"] = Program.Settings.ConnectionStrings;
                     }
                     catch (Exception ex)
                     {

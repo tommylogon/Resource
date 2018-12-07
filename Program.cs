@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 using Resource.Models;
 using System;
 
@@ -10,6 +11,8 @@ namespace Resource
 {
     public class Program
     {
+        public static Setting Settings { get; set; }
+
         public static void Main(string[] args)
         {
             var host = CreateWebHostBuilder(args).Build();
@@ -29,7 +32,15 @@ namespace Resource
                     logger.LogError(ex, "An error occured seeding the DB.");
                 }
             }
+            ReadJSONConfig();
             host.Run();
+        }
+
+        public static void ReadJSONConfig()
+        {
+            JObject jsonFile = JObject.Parse(System.IO.File.ReadAllText("appsettings.json"));
+
+            Settings = jsonFile.ToObject<Setting>();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

@@ -1,19 +1,16 @@
 ﻿@page
 @model Resource.Pages.test.panelModel
 @{
-    ViewData["Title"] = "panel";
-    Layout = "~/Pages/test/Themetest.cshtml";
+    ViewData["Title"] = "Resource Panel";
+    Layout = "~/Pages/panel/_themeLayout.cshtml";
 }
 
-<h2>panel</h2>
-
-<div id="content-wrapper">
 
     <div class="container-fluid">
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a >Dashboard</a>
+                <a>Dashboard</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
         </ol>
@@ -27,7 +24,7 @@
                         </div>
                         <div class="mr-5">26 New Messages!</div>
                     </div>
-                    <a class="card-footer text-white clearfix small z-1" >
+                    <a class="card-footer text-white clearfix small z-1">
                         <span class="float-left">View Details</span>
                         <span class="float-right">
                             <i class="fas fa-angle-right"></i>
@@ -43,7 +40,7 @@
                         </div>
                         <div class="mr-5">11 New Tasks!</div>
                     </div>
-                    <a class="card-footer text-white clearfix small z-1" >
+                    <a class="card-footer text-white clearfix small z-1">
                         <span class="float-left">View Details</span>
                         <span class="float-right">
                             <i class="fas fa-angle-right"></i>
@@ -59,7 +56,7 @@
                         </div>
                         <div class="mr-5">123 New Orders!</div>
                     </div>
-                    <a class="card-footer text-white clearfix small z-1" >
+                    <a class="card-footer text-white clearfix small z-1">
                         <span class="float-left">View Details</span>
                         <span class="float-right">
                             <i class="fas fa-angle-right"></i>
@@ -75,7 +72,7 @@
                         </div>
                         <div class="mr-5">13 New Tickets!</div>
                     </div>
-                    <a class="card-footer text-white clearfix small z-1" >
+                    <a class="card-footer text-white clearfix small z-1">
                         <span class="float-left">View Details</span>
                         <span class="float-right">
                             <i class="fas fa-angle-right"></i>
@@ -104,7 +101,7 @@
             <div class="card-body">
                 <div class="table-responsive">
 
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    @*<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>
@@ -163,11 +160,10 @@
                                     </td>
                                 </tr>
                             }
-                        </tbody>
+                        </tbody>*@
                     </table>
                 </div>
             </div>
             <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
-</div>

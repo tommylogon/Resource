@@ -77,7 +77,7 @@ using Resource;
             WriteLiteral("</h3>\r\n\r\n<div class=\"container\">\r\n    <div class=\"card card-register mx-auto mt-5\">\r\n        <div class=\"card-header\">Connect to DB</div>\r\n        <div class=\"card-body\">\r\n            ");
             EndContext();
             BeginContext(600, 2301, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4db2731cd7614878adff9d9b2797ac8e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8c79d732e8954e46bc94158c3e3ba692", async() => {
                 BeginContext(620, 2274, true);
                 WriteLiteral(@"
                 <div class=""form-group"">
@@ -148,7 +148,7 @@ using Resource;
 ");
             EndContext();
             BeginContext(3171, 546, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51d16629059943fa8e0c806185761740", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ec00e2b19944fff9ee85102781d5524", async() => {
                 BeginContext(3204, 506, true);
                 WriteLiteral(@"
     <div> DataSource: <input type=""text"" name=""DataSource"" /> </div>

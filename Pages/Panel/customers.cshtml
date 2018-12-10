@@ -25,45 +25,47 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            @foreach (string name in Model.ColumbNames)
-                            {
-                                <th>
-                                    @Html.DisplayFor(model => name)
-                                </th>
-                            }
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            @foreach (string name in Model.ColumbNames)
-                            {
-                                <th>
-                                    @Html.DisplayFor(model => name)
-                                </th>
-                            }
-                            <th></th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        @foreach (var item in Model.Row)
+                <table class="table table-bordered" id="CustomerTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    @foreach (string name in Model.ColumbNames)
+                    {
+                        <th>
+                            @Html.DisplayFor(model => name)
+                        </th>
+                    }
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    @foreach (string name in Model.ColumbNames)
+                    {
+                        <th>
+                            @Html.DisplayFor(model => name)
+                        </th>
+                    }
+                </tr>
+            </tfoot>
+            <tbody>
+                @foreach (var item in Model.Row)
+                {
+                    <tr>
+                        @foreach (var subitem in item.Item2)
                         {
-                            <tr>
-                                @foreach (var subitem in item.Item2)
-                                {
-                                    <td>
-                                        @Html.DisplayFor(modelItem => subitem)
-                                    </td>
-                                }
-                            </tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => subitem)
+                            </td>
                         }
-                    </tbody>
-                </table>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
             </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
     </div>
 </div>
+<environment include="Development">
+    
+</environment>

@@ -1,11 +1,11 @@
 ﻿@page
-@model Resource.Pages.Panel.CustomersModel
+@model Resource.Pages.Panel.MachinesModel
 @{
-    ViewData["Title"] = "customers";
+    ViewData["Title"] = "Machines";
     Layout = "~/Pages/Panel/_themeLayout.cshtml";
 }
 
-<h2>customers</h2>
+<h2>Machines</h2>
 
 <div class="container-fluid">
 
@@ -25,7 +25,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="CustomerTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="MachineTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             @foreach (string name in Model.Row[0].Item3)
@@ -38,7 +38,7 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            @foreach (string name in Model.Row[0].Item3)
+                            @foreach (string name in Model.ColumbNames)
                             {
                                 <th>
                                     @Html.DisplayFor(model => name)

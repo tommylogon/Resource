@@ -15,18 +15,12 @@ namespace Resource.Pages.Panel
     {
         private ResourceContext _context;
 
+        public List<Tuple<int, List<string>, List<string>>> Row;
+
         public CustomersModel(ResourceContext context)
         {
             _context = context;
         }
-
-        public IList<Customer> Customer { get; set; }
-
-        public List<string> ColumbNames { get; set; } = new List<string>();
-
-        public List<string> ColumbValues { get; set; } = new List<string>();
-
-        public List<Tuple<int, List<string>>> Row;
 
         //public string SearchString { get; set; }
         //public string SelectedName { get; set; }
@@ -34,7 +28,7 @@ namespace Resource.Pages.Panel
         public async Task OnGetAsync(string searchString)
         {
             DataAccessLayer dataAccess = new DataAccessLayer();
-            Row = dataAccess.GetDB_Data("CUSTOMER", "*");
+            Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
 
             //var customers = from c in _context.Customer
             //                select c;

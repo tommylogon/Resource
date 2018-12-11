@@ -39,3 +39,5 @@ C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Page
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Index.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\_themeLayout.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\customers.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Machines.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CustomerOverview.g.cshtml.cs

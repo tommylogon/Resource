@@ -11,7 +11,7 @@
     <environment include="Development">
         <!-- Bootstrap core CSS-->
         <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        
+
         <!-- Page level plugin CSS-->
         <link href="~/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -120,9 +120,9 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a asp-page="tables.html" class="nav-link">
+                <a asp-page="customerOverview" class="nav-link">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span>
+                    <span>Customer Overview</span>
                 </a>
             </li>
         </ul>
@@ -170,7 +170,6 @@
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
 
-
         <!-- Bootstrap core JavaScript-->
         <script src="~/vendor/jquery/jquery.min.js"></script>
         <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -185,6 +184,9 @@
         <!-- Demo scripts for this page-->
         <script src="~/js/demo/datatables-demo.js"></script>
         <script src="~/js/demo/chart-area-demo.js"></script>
+        <script src="~/js/demo/chart-bar-demo.js"></script>
+        <script src="~/js/demo/chart-pie-demo.js"></script>
+
     </environment>
     @RenderSection("Scripts", required: false)
 </body>

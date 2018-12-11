@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,20 +17,20 @@ namespace Resource.Models
 
         public List<string> ColumbValues { get; set; } = new List<string>();
 
-        public List<Tuple<int, List<string>>> Row { get; set; } = new List<Tuple<int, List<string>>>();
+        public List<Tuple<int, List<string>, List<string>>> Row { get; set; } = new List<Tuple<int, List<string>, List<string>>>();
 
         private int rowNumber = 0;
 
-        public List<Tuple<int, List<string>>> GetDB_Data(string table, string columbs)
+        public async Task<List<Tuple<int, List<string>, List<string>>>> GetDB_DataAsync(string searchQuery)
         {
             Program.ReadJSONConfig();
             string connString = Program.Settings.ConnectionStrings["ResourceContext"];
 
-            using (SqlConnection connection = new SqlConnection("Server= ITD-K01-Z400\\EVATIC; Database=Evatic; User ID = sa; Password = 1414; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"))
+            using (SqlConnection connection = new SqlConnection(connString))
             {
                 connection.Open();
 
-                SqlCommand querry = new SqlCommand("SELECT " + Columbs + " FROM " + Table, connection);
+                SqlCommand querry = new SqlCommand(searchQuery, connection);
 
                 using (SqlDataReader reader = querry.ExecuteReader())
                 {
@@ -49,7 +50,55 @@ namespace Resource.Models
                             ColumbValues.Add(reader.GetValue(i).ToString());
                         }
 
-                        Row.Add(new Tuple<int, List<string>>(rowNumber, ColumbValues));
+                        Row.Add(new Tuple<int, List<string>, List<string>>(rowNumber, ColumbValues, ColumbNames));
+
+                        rowNumber++;
+                    }
+                    reader.Close();
+                }
+
+                connection.Close();
+            }
+            return Row;
+        }
+
+        public List<Tuple<int, List<string>, List<string>>> GetCustomersHavingMachines(string searchQuery)
+        {
+            Program.ReadJSONConfig();
+            string connString = Program.Settings.ConnectionStrings["ResourceContext"];
+
+            using (SqlConnection connection = new SqlConnection(connString))
+            {
+                connection.Open();
+
+                SqlCommand querry = new SqlCommand(searchQuery, connection);
+
+                using (SqlDataReader reader = querry.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ColumbNames = new List<string>();
+
+                        ColumbValues = new List<string>();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            foreach (string value in ColumbValues)
+                            {
+                                if (value == reader.GetValue(i).ToString() && value != "" && (reader.GetName(i) == "CUSTOMER_OBJ_NO" || reader.GetName(i) == "OBJ_NO"))
+                                {
+                                    continue;
+                                }
+                            }
+                            if (ColumbNames.Count != reader.FieldCount)
+                            {
+                                ColumbNames.Add(reader.GetName(i));
+                            }
+
+                            ColumbValues.Add(reader.GetValue(i).ToString());
+                        }
+
+                        Row.Add(new Tuple<int, List<string>, List<string>>(rowNumber, ColumbValues, ColumbNames));
 
                         rowNumber++;
                     }

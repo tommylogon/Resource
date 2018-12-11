@@ -180,7 +180,7 @@ using Resource;
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    <ul>\r\n        <li>");
             EndContext();
             BeginContext(1382, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb97c1cbf41d4a9abd05d86b11638ea9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "510b7fa9f8004e84893e97e44fb0992b", async() => {
                 BeginContext(1445, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -215,7 +215,7 @@ using Resource;
             WriteLiteral("</li>\r\n        <li> ");
             EndContext();
             BeginContext(1473, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b541e6f8a3e4c4481da492c97242648", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9a11a1e203ad42958fe72d31e20426bb", async() => {
                 BeginContext(1495, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();
@@ -237,7 +237,7 @@ using Resource;
             WriteLiteral("</li>\r\n        <li>");
             EndContext();
             BeginContext(1530, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3d327eee202423ab88c25d971378e35", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db5ef371a576434f96fd07ec2a3ac0ee", async() => {
                 BeginContext(1559, 13, true);
                 WriteLiteral("Back to Panel");
                 EndContext();

@@ -5,4 +5,7 @@ $(document).ready(function () {
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
     $('#MachineTable').DataTable();
+});// Call the dataTables jQuery plugin
+$(document).ready(function () {
+    $('#DetailsTable').DataTable();
 });

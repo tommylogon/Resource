@@ -26,7 +26,7 @@ namespace Resource.Pages.Panel
         public async Task OnGetAsync(string searchString)
         {
             DataAccessLayer dataAccess = new DataAccessLayer();
-            Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, Machine_no, Customer_obj_no, Location, phone_no, installation_date, sortgroup_1, sortgroup_2, active_from, active_to, obj_date FROM MACHINE");
+            Row = dataAccess.GetDB_Data("SELECT obj_no, Machine_no, Customer_obj_no, Location, phone_no, installation_date, sortgroup_1, sortgroup_2, active_from, active_to, obj_date FROM MACHINE");
         }
     }
 }

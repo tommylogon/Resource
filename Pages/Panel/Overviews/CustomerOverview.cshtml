@@ -47,14 +47,15 @@
                     Pie Chart Example
                 </div>
                 <div class="card-body">
+                    <canvas id="CustomerPie" width="100%" height="100"></canvas>
+                    @{ ChartJSCore.Models.Chart chart = (ChartJSCore.Models.Chart)ViewData["chart"]; }
                 </div>
                 <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
             </div>
         </div>
     </div>
     <div>
-        <canvas id="CustomerPie" width="100%" height="100"></canvas>
-        @{ ChartJSCore.Models.Chart chart = (ChartJSCore.Models.Chart)ViewData["chart"]; }
+        
     </div>
     <p class="small text-center text-muted my-5">
         <em>More chart examples coming soon...</em>
@@ -64,7 +65,7 @@
 <div class="card mb-3">
     <div class="card-header">
         <i class="fas fa-table"></i>
-        Data Table Example
+        Customer having machines relations
     </div>
     <div class="card-body">
         <div class="table-responsive">

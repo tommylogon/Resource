@@ -15,6 +15,8 @@ namespace Resource.Pages.Panel
     {
         private ResourceContext _context;
 
+        public int IndexOfCustomerID = 0;
+
         public List<Tuple<int, List<string>, List<string>>> Row;
 
         public CustomersModel(ResourceContext context)
@@ -28,7 +30,7 @@ namespace Resource.Pages.Panel
         public async Task OnGetAsync(string searchString)
         {
             DataAccessLayer dataAccess = new DataAccessLayer();
-            Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
+            Row = dataAccess.GetDB_Data("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
 
             //var customers = from c in _context.Customer
             //                select c;

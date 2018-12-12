@@ -21,8 +21,9 @@ namespace Resource.Models
 
         private int rowNumber = 0;
 
-        public async Task<List<Tuple<int, List<string>, List<string>>>> GetDB_DataAsync(string searchQuery)
+        public List<Tuple<int, List<string>, List<string>>> GetDB_Data(string searchQuery)
         {
+            Row.Clear();
             Program.ReadJSONConfig();
             string connString = Program.Settings.ConnectionStrings["ResourceContext"];
 
@@ -64,6 +65,7 @@ namespace Resource.Models
 
         public List<Tuple<int, List<string>, List<string>>> GetCustomersHavingMachines(string searchQuery)
         {
+            Row.Clear();
             Program.ReadJSONConfig();
             string connString = Program.Settings.ConnectionStrings["ResourceContext"];
 

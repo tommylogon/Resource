@@ -34,16 +34,18 @@
                                     @Html.DisplayFor(model => name)
                                 </th>
                             }
+                            <th>CRUD</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            @foreach (string name in Model.ColumbNames)
+                            @foreach (string name in Model.Row[0].Item3)
                             {
                                 <th>
                                     @Html.DisplayFor(model => name)
                                 </th>
                             }
+                            <th>CRUD</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -56,6 +58,11 @@
                                         @Html.DisplayFor(modelItem => subitem)
                                     </td>
                                 }
+                                <td>
+                                    <a asp-page="../CRUDs/Update" asp-route-id="@item.Item2[Model.IndexOfMachineID]" asp-route-table="@Model.Table">Edit</a> |
+                                    <a asp-page="../CRUDs/Details" asp-route-id="@item.Item2[Model.IndexOfMachineID]" asp-route-table="@Model.Table">Details</a> |
+                                    <a asp-page="../CRUDs/Delete" asp-route-id="@item.Item2[Model.IndexOfMachineID]" asp-route-table="@Model.Table">Delete</a>
+                                </td>
                             </tr>
                         }
                     </tbody>

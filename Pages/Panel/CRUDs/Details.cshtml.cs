@@ -10,29 +10,24 @@ namespace Resource.Pages.Panel.CRUDs
 {
     public class DetailsModel : PageModel
     {
-        private ResourceContext _context;
-
         public List<Tuple<int, List<string>, List<string>>> Row;
-        public int IndexOfCustomerID = 0;
-        public List<string> CustomerNumbers { get; set; } = new List<string>();
+        public string Table { get; set; }
+        public string TablePath { get; set; }
+        public int IndexOfID = 0;
 
-        public DetailsModel(ResourceContext context)
+        public DetailsModel()
         {
-            _context = context;
         }
 
-        //public string SearchString { get; set; }
-        //public string SelectedName { get; set; }
-
-        public async Task OnGetAsync(string selectedTable)
+        public async Task OnGetAsync(string table, string id)
         {
-            DataAccessLayer dataAccess = new DataAccessLayer();
-            Row = new List<Tuple<int, List<string>, List<string>>>(dataAccess.GetDB_Data("SELECT * FROM " + selectedTable));
+            Table = table;
 
-            foreach (Tuple<int, List<string>, List<string>> tuple in Row)
-            {
-                CustomerNumbers.Add(tuple.Item2[IndexOfCustomerID]);
-            }
+            TablePath = Table + "s";
+
+            DataAccessLayer dataAccess = new DataAccessLayer();
+
+            Row = await (dataAccess.GetDB_DataAsync(String.Format("SELECT * FROM {0} WHERE OBJ_NO = '{1}'", table, id)));
         }
     }
 }

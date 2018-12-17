@@ -7,3 +7,57 @@
 
 <h2>Update</h2>
 
+<hr />
+<div class="container">
+    <div class="card ">
+        <div class="card-header">Edit or Update</div>
+        <div class="card-body">
+            <form method="post">
+                @for (int i = 0; i < Model.Row[0].Item3.Count(); i++)
+                {
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">@Model.Row[0].Item3[i]</label>
+                                    <input type="text" name="Model.Row[0].Item3[i]" class="form-control" value="@Model.Row[0].Item2[i]">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    @if ((i + 1) < Model.Row[0].Item3.Count())
+                                    {
+                                        i++;
+                                        <label class="control-label">@Model.Row[0].Item3[i]</label>
+                                        <input type="text" name="Model.Row[0].Item3[i]" class="form-control" value="@Model.Row[0].Item2[i]">
+                                    }
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    @if ((i + 1) < Model.Row[0].Item3.Count())
+                                    {
+                                        i++;
+                                        <label class="control-label">@Model.Row[0].Item3[i]</label>
+                                        <input type="text" name="Model.Row[0].Item3[i]" class="form-control" value="@Model.Row[0].Item2[i]">
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <ul>
+            <li><a asp-page="/Panel/Tables/@Model.TablePath">Back to List</a></li>
+            <li><a asp-page="/panel/index">Back to Panel</a></li>
+        </ul>
+    </div>
+</div>

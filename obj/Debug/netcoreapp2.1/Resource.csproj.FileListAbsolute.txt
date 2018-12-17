@@ -35,7 +35,6 @@ C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Page
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Details.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Edit.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Index.g.cshtml.cs
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Settings.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Index.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\_themeLayout.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Overviews\CustomerOverview.g.cshtml.cs
@@ -45,3 +44,4 @@ C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Page
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Update.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Details.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Tables\customers.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Settings.g.cshtml.cs

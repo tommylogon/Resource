@@ -5,7 +5,7 @@
     Layout = "~/Pages/Panel/_themeLayout.cshtml";
 }
 
-<h2>customers</h2>
+<h2>Customers</h2>
 
 <div class="container-fluid">
 
@@ -63,9 +63,9 @@
                                     </td>
                                 }
                                 <td>
-                                    <a asp-page="./Edit" asp-route-id="@item.Item2[Model.IndexOfCustomerID]">Edit</a> |
-                                    <a asp-page="./Details" asp-route-id="@item.Item2[Model.IndexOfCustomerID]">Details</a> |
-                                    <a asp-page="./Delete" asp-route-id="@item.Item2[Model.IndexOfCustomerID]">Delete</a>
+                                    <a asp-page="../CRUDs/Update" asp-route-id="@item.Item2[Model.IndexOfCustomerID]" asp-route-table="@Model.Table">Edit</a> |
+                                    <a asp-page="../CRUDs/Details" asp-route-id="@item.Item2[Model.IndexOfCustomerID]" asp-route-table="@Model.Table">Details</a> |
+                                    <a asp-page="../CRUDs/Delete" asp-route-id="@item.Item2[Model.IndexOfCustomerID]" asp-route-table="@Model.Table">Delete</a>
                                 </td>
                             </tr>
                         }

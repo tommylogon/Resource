@@ -13,7 +13,6 @@
     }
 </script>
 <h2>Settings</h2>
-<h3>Connected to: @ViewData["config"]</h3>
 
 <div class="container">
     <div class="card card-register mx-auto mt-5">
@@ -38,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <div class="form-label-group">
-                        <input type="checkbox" name="Trusted" class="form-control"/>
+                        <input type="checkbox" name="Trusted" class="form-control" />
                         <label for="UserID">User ID</label>
                     </div>
                 </div>
@@ -46,18 +45,17 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <div class="form-label-group">
-                                <input type="Text" name="UserID" class="form-control" placeholder="User ID" >
+                                <input type="Text" name="UserID" class="form-control" placeholder="User ID">
                                 <label for="UserID">User ID</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            
+
                             <div class="form-label-group">
-                                <input type="password" name="inputPassword" class="form-control" placeholder="Password" >
+                                <input type="password" name="inputPassword" class="form-control" placeholder="Password">
                                 <label for="inputPassword">Password</label>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 <a class="btn btn-primary btn-block" href="login.html">Register</a>
@@ -84,13 +82,13 @@
 </form>
 @if (!ViewData.ModelState.IsValid && ViewData.ModelState["Error"].Errors.Count > 0)
 {
-    <div class="alert alert-danger">
-        <strong>Error!</strong>@ViewData.ModelState["Error"].Errors.First().ErrorMessage
-    </div>
+<div class="alert alert-danger">
+    <strong>Error!</strong>@ViewData.ModelState["Error"].Errors.First().ErrorMessage
+</div>
 }
 @if ((string)ViewData["ConnectionTrue"] == "true")
 {
-    <div class="alert alert-success">
-        <strong>Success!</strong>@ViewData["ConnString"].ToString() connected sucsessfully.
-    </div>
+<div class="alert alert-success">
+    <strong>Success!</strong>@ViewData["ConnString"].ToString() connected sucsessfully.
+</div>
 }

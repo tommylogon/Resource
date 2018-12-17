@@ -10,17 +10,12 @@ namespace Resource.Pages.Panel
 {
     public class MachinesModel : PageModel
     {
-        private ResourceContext _context;
-
-        public List<string> ColumbNames { get; set; } = new List<string>();
-
-        public List<string> ColumbValues { get; set; } = new List<string>();
-
         public List<Tuple<int, List<string>, List<string>>> Row;
+        public string Table = "Machine";
+        public int IndexOfMachineID = 0;
 
         public MachinesModel(ResourceContext context)
         {
-            _context = context;
         }
 
         public async Task OnGetAsync(string searchString)

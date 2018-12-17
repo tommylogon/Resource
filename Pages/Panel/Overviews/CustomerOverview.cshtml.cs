@@ -16,6 +16,8 @@ namespace Resource.Pages.Panel
 
         public CustomerData CustomerDatas { get; set; } = new CustomerData();
 
+        public int IndexOfActiveTo = 11;
+
         public class CustomerData
         {
             public List<double> CustomerMentionings { get; set; } = new List<double>();
@@ -45,7 +47,7 @@ namespace Resource.Pages.Panel
                 DateTime activeTo;
                 try
                 {
-                    DateTime.TryParse(tuple.Item2[11], out activeTo);
+                    DateTime.TryParse(tuple.Item2[IndexOfActiveTo], out activeTo);
                     CustomerDatas.ActiveToDates.Add(activeTo);
 
                     if (activeTo > currentDate)
@@ -123,7 +125,10 @@ namespace Resource.Pages.Panel
             {
                 foreach (string value in tuple.Item2)
                 {
-                    pieValues.Add(Double.Parse(value));
+                    if (value != "0" && value != "1")
+                    {
+                        pieValues.Add(Double.Parse(value));
+                    }
                 }
             }
 
@@ -131,13 +136,13 @@ namespace Resource.Pages.Panel
             pieChart.Type = "pie";
             Data pieData = new Data();
 
-            pieData.Labels = new List<string>() { "Pending", "Unknown", "Completed" };
+            pieData.Labels = new List<string>() { "Pending", "Completed" };
 
             PieDataset dataset = new PieDataset()
             {
                 Label = "Customer with the most machines",
                 Data = pieValues,
-                BackgroundColor = new List<string>() { "#ff0000", "#000000", "#00ff00" }
+                BackgroundColor = new List<string>() { "#ff0000", "#00ff00" }
             };
             pieData.Datasets = new List<Dataset>();
 

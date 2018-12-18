@@ -30,11 +30,6 @@ C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Resource.V
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Resource.dll
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Resource.pdb
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Resource.csproj.CopyComplete
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Create.g.cshtml.cs
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Delete.g.cshtml.cs
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Details.g.cshtml.cs
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Edit.g.cshtml.cs
-C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Customers\Index.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Index.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\_themeLayout.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Overviews\CustomerOverview.g.cshtml.cs
@@ -45,3 +40,8 @@ C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Page
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Details.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Tables\customers.g.cshtml.cs
 C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\Settings.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Customers\Create.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Customers\Delete.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Customers\Details.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Customers\Edit.g.cshtml.cs
+C:\Users\Tommy\source\repos\Resource\Resource\obj\Debug\netcoreapp2.1\Razor\Pages\Panel\CRUDs\Customers\Index.g.cshtml.cs

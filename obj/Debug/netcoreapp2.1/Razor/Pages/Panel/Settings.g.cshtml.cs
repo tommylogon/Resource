@@ -72,7 +72,7 @@ using Resource;
             ");
             EndContext();
             BeginContext(556, 2246, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0973e247511444459a71466acf54eed6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f9cbd128b1543d8b3a5d266d084f3f7", async() => {
                 BeginContext(576, 2219, true);
                 WriteLiteral(@"
                 <div class=""form-group"">
@@ -144,7 +144,7 @@ using Resource;
 ");
             EndContext();
             BeginContext(3072, 546, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e155c96a2cb84071b7db92ae0d765d8e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9aa97a3ee03940bebef3d3dd9e8d7655", async() => {
                 BeginContext(3105, 506, true);
                 WriteLiteral(@"
     <div> DataSource: <input type=""text"" name=""DataSource"" /> </div>

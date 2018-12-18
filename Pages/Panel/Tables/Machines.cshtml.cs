@@ -14,10 +14,6 @@ namespace Resource.Pages.Panel
         public string Table = "Machine";
         public int IndexOfMachineID = 0;
 
-        public MachinesModel(ResourceContext context)
-        {
-        }
-
         public async Task OnGetAsync(string searchString)
         {
             DataAccessLayer dataAccess = new DataAccessLayer();

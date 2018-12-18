@@ -11,14 +11,14 @@ namespace Resource
 {
     public class Startup
     {
-        private IHostingEnvironment Env { get; }
-        private IConfiguration Config { get; }
+        private IHostingEnvironment Enviroment { get; }
+        private IConfiguration Configuration { get; }
         private ILoggerFactory LoggerFactory { get; }
 
         public Startup(IHostingEnvironment env, IConfiguration config, ILoggerFactory loggerFactory)
         {
-            Config = config;
-            Env = env;
+            Configuration = config;
+            Enviroment = env;
             LoggerFactory = loggerFactory;
         }
 
@@ -27,7 +27,7 @@ namespace Resource
         {
             var logger = LoggerFactory.CreateLogger<Startup>();
 
-            if (Env.IsDevelopment())
+            if (Enviroment.IsDevelopment())
             {
                 // Development service configuration
 
@@ -37,12 +37,12 @@ namespace Resource
             {
                 // Non-development service configuration
 
-                logger.LogInformation($"Environment: {Env.EnvironmentName}");
+                logger.LogInformation($"Environment: {Enviroment.EnvironmentName}");
             }
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<ResourceContext>(options => options.UseSqlServer(Config.GetConnectionString("ResourceContext")));
+            services.AddDbContext<EvaticContext>(option => option.UseSqlServer(Configuration.GetConnectionString("ResourceContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

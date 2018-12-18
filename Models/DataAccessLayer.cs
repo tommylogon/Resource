@@ -112,16 +112,6 @@ namespace Resource.Models
                 connection.Open();
 
                 SqlCommand querry = new SqlCommand(updateQuery, connection);
-
-                using (sqlda reader = querry.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                    }
-                    reader.Close();
-                }
-
-                connection.Close();
             }
         }
 

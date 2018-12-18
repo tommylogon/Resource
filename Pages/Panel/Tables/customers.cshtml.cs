@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,16 +18,36 @@ namespace Resource.Pages.Panel
 
         public List<Tuple<int, List<string>, List<string>>> Row;
 
+        public List<Customer> customers;
+
+        public List<PropertyInfo> properties;
+
         public string Table = "Customer";
 
-        public CustomersModel(ResourceContext context)
+        private readonly EvaticContext _context;
+
+        public CustomersModel(EvaticContext context)
         {
+            _context = context;
         }
 
-        public async Task OnGetAsync(string searchString)
+        public IList<Customer> Customer { get; set; }
+
+        public async Task OnGetAsync()
         {
-            DataAccessLayer dataAccess = new DataAccessLayer();
-            Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
+            Customer = await _context.Customer.ToListAsync();
         }
+
+        //public async Task OnGetAsync(string searchString)
+        //{
+        //    using (var context = new EvaticContext())
+        //    {
+        //        customers = context.Customer.ToList();
+
+        //    }
+
+        //    //DataAccessLayer dataAccess = new DataAccessLayer();
+        //    //Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
+        //}
     }
 }

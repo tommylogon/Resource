@@ -22,9 +22,6 @@ namespace Resource
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<ResourceContext>();
-                    context.Database.Migrate();
-                    SeedData.Initialize(services);
                 }
                 catch (Exception ex)
                 {

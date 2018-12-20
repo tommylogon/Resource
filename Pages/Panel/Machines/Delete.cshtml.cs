@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Resource.Models;
 
-namespace Resource.Pages.Panel.CRUDs.Customers
+namespace Resource.Pages.Panel.Machines
 {
     public class DeleteModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace Resource.Pages.Panel.CRUDs.Customers
         }
 
         [BindProperty]
-        public Customer Customer { get; set; }
+        public Machine Machine { get; set; }
 
         public async Task<IActionResult> OnGetAsync(Guid? id)
         {
@@ -28,13 +28,14 @@ namespace Resource.Pages.Panel.CRUDs.Customers
                 return NotFound();
             }
 
-            Customer = await _context.Customer
-                .Include(c => c.CompanyNavigation)
-                .Include(c => c.CreditTermNavigation)
-                .Include(c => c.Department)
-                .Include(c => c.SalesmanObjNoNavigation).FirstOrDefaultAsync(m => m.ObjNo == id);
+            Machine = await _context.Machine
+                .Include(m => m.Address)
+                .Include(m => m.CompanyNavigation)
+                .Include(m => m.CustomerObjNoNavigation)
+                .Include(m => m.Department)
+                .Include(m => m.ModelObjNoNavigation).FirstOrDefaultAsync(m => m.ObjNo == id);
 
-            if (Customer == null)
+            if (Machine == null)
             {
                 return NotFound();
             }
@@ -48,11 +49,11 @@ namespace Resource.Pages.Panel.CRUDs.Customers
                 return NotFound();
             }
 
-            Customer = await _context.Customer.FindAsync(id);
+            Machine = await _context.Machine.FindAsync(id);
 
-            if (Customer != null)
+            if (Machine != null)
             {
-                _context.Customer.Remove(Customer);
+                _context.Machine.Remove(Machine);
                 await _context.SaveChangesAsync();
             }
 

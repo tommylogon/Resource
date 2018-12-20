@@ -1,0 +1,261 @@
+﻿@page
+@model Resource.Pages.Panel.Machines.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Panel/_themeLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>Machine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Machine.ObjNo" />
+            <div class="form-group">
+                <label asp-for="Machine.Company" class="control-label"></label>
+                <select asp-for="Machine.Company" class="form-control" asp-items="ViewBag.Company"></select>
+                <span asp-validation-for="Machine.Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.MachineNo" class="control-label"></label>
+                <input asp-for="Machine.MachineNo" class="form-control" />
+                <span asp-validation-for="Machine.MachineNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ModelObjNo" class="control-label"></label>
+                <select asp-for="Machine.ModelObjNo" class="form-control" asp-items="ViewBag.ModelObjNo"></select>
+                <span asp-validation-for="Machine.ModelObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.RevNo" class="control-label"></label>
+                <input asp-for="Machine.RevNo" class="form-control" />
+                <span asp-validation-for="Machine.RevNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.CustomerObjNo" class="control-label"></label>
+                <select asp-for="Machine.CustomerObjNo" class="form-control" asp-items="ViewBag.CustomerObjNo"></select>
+                <span asp-validation-for="Machine.CustomerObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.AddressRowNo" class="control-label"></label>
+                <select asp-for="Machine.AddressRowNo" class="form-control" asp-items="ViewBag.AddressRowNo"></select>
+                <span asp-validation-for="Machine.AddressRowNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Location" class="control-label"></label>
+                <input asp-for="Machine.Location" class="form-control" />
+                <span asp-validation-for="Machine.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.PhoneNo" class="control-label"></label>
+                <input asp-for="Machine.PhoneNo" class="form-control" />
+                <span asp-validation-for="Machine.PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.FaxNo" class="control-label"></label>
+                <input asp-for="Machine.FaxNo" class="form-control" />
+                <span asp-validation-for="Machine.FaxNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InstallationDate" class="control-label"></label>
+                <input asp-for="Machine.InstallationDate" class="form-control" />
+                <span asp-validation-for="Machine.InstallationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Node" class="control-label"></label>
+                <input asp-for="Machine.Node" class="form-control" />
+                <span asp-validation-for="Machine.Node" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Sortgroup1" class="control-label"></label>
+                <input asp-for="Machine.Sortgroup1" class="form-control" />
+                <span asp-validation-for="Machine.Sortgroup1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Sortgroup2" class="control-label"></label>
+                <input asp-for="Machine.Sortgroup2" class="form-control" />
+                <span asp-validation-for="Machine.Sortgroup2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Sortgroup3" class="control-label"></label>
+                <input asp-for="Machine.Sortgroup3" class="form-control" />
+                <span asp-validation-for="Machine.Sortgroup3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Sortgroup4" class="control-label"></label>
+                <input asp-for="Machine.Sortgroup4" class="form-control" />
+                <span asp-validation-for="Machine.Sortgroup4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Sortgroup5" class="control-label"></label>
+                <input asp-for="Machine.Sortgroup5" class="form-control" />
+                <span asp-validation-for="Machine.Sortgroup5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ActiveFrom" class="control-label"></label>
+                <input asp-for="Machine.ActiveFrom" class="form-control" />
+                <span asp-validation-for="Machine.ActiveFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ActiveTo" class="control-label"></label>
+                <input asp-for="Machine.ActiveTo" class="form-control" />
+                <span asp-validation-for="Machine.ActiveTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Status" class="control-label"></label>
+                <input asp-for="Machine.Status" class="form-control" />
+                <span asp-validation-for="Machine.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Information" class="control-label"></label>
+                <input asp-for="Machine.Information" class="form-control" />
+                <span asp-validation-for="Machine.Information" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InvoiceReference" class="control-label"></label>
+                <input asp-for="Machine.InvoiceReference" class="form-control" />
+                <span asp-validation-for="Machine.InvoiceReference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ResponseTime" class="control-label"></label>
+                <input asp-for="Machine.ResponseTime" class="form-control" />
+                <span asp-validation-for="Machine.ResponseTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ObjDate" class="control-label"></label>
+                <input asp-for="Machine.ObjDate" class="form-control" />
+                <span asp-validation-for="Machine.ObjDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Username" class="control-label"></label>
+                <input asp-for="Machine.Username" class="form-control" />
+                <span asp-validation-for="Machine.Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.Dept" class="control-label"></label>
+                <select asp-for="Machine.Dept" class="form-control" asp-items="ViewBag.Dept"></select>
+                <span asp-validation-for="Machine.Dept" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ServicesCode" class="control-label"></label>
+                <input asp-for="Machine.ServicesCode" class="form-control" />
+                <span asp-validation-for="Machine.ServicesCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InactiveText" class="control-label"></label>
+                <input asp-for="Machine.InactiveText" class="form-control" />
+                <span asp-validation-for="Machine.InactiveText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InstallationNode" class="control-label"></label>
+                <input asp-for="Machine.InstallationNode" class="form-control" />
+                <span asp-validation-for="Machine.InstallationNode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InstallationName" class="control-label"></label>
+                <input asp-for="Machine.InstallationName" class="form-control" />
+                <span asp-validation-for="Machine.InstallationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InvoiceReferenceManuel" class="control-label"></label>
+                <input asp-for="Machine.InvoiceReferenceManuel" class="form-control" />
+                <span asp-validation-for="Machine.InvoiceReferenceManuel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.ServiceOrderReference" class="control-label"></label>
+                <input asp-for="Machine.ServiceOrderReference" class="form-control" />
+                <span asp-validation-for="Machine.ServiceOrderReference" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.PackingSlipText" class="control-label"></label>
+                <input asp-for="Machine.PackingSlipText" class="form-control" />
+                <span asp-validation-for="Machine.PackingSlipText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.CustomerDelObjNo" class="control-label"></label>
+                <input asp-for="Machine.CustomerDelObjNo" class="form-control" />
+                <span asp-validation-for="Machine.CustomerDelObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.AddressDelRowNo" class="control-label"></label>
+                <input asp-for="Machine.AddressDelRowNo" class="form-control" />
+                <span asp-validation-for="Machine.AddressDelRowNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.InformationAlwaysOn" class="control-label"></label>
+                <input asp-for="Machine.InformationAlwaysOn" class="form-control" />
+                <span asp-validation-for="Machine.InformationAlwaysOn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.TechnicianObjNo" class="control-label"></label>
+                <input asp-for="Machine.TechnicianObjNo" class="form-control" />
+                <span asp-validation-for="Machine.TechnicianObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.RespCustomerObjNo" class="control-label"></label>
+                <input asp-for="Machine.RespCustomerObjNo" class="form-control" />
+                <span asp-validation-for="Machine.RespCustomerObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.RemoteAccessAdr" class="control-label"></label>
+                <input asp-for="Machine.RemoteAccessAdr" class="form-control" />
+                <span asp-validation-for="Machine.RemoteAccessAdr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.RemoteAccessType" class="control-label"></label>
+                <input asp-for="Machine.RemoteAccessType" class="form-control" />
+                <span asp-validation-for="Machine.RemoteAccessType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.CustomerInvObjNo" class="control-label"></label>
+                <input asp-for="Machine.CustomerInvObjNo" class="form-control" />
+                <span asp-validation-for="Machine.CustomerInvObjNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.AddressInvRowNo" class="control-label"></label>
+                <input asp-for="Machine.AddressInvRowNo" class="form-control" />
+                <span asp-validation-for="Machine.AddressInvRowNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.RelationMaster" class="control-label"></label>
+                <input asp-for="Machine.RelationMaster" class="form-control" />
+                <span asp-validation-for="Machine.RelationMaster" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.CustomerWarrantyValidTo" class="control-label"></label>
+                <input asp-for="Machine.CustomerWarrantyValidTo" class="form-control" />
+                <span asp-validation-for="Machine.CustomerWarrantyValidTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.IdNo" class="control-label"></label>
+                <input asp-for="Machine.IdNo" class="form-control" />
+                <span asp-validation-for="Machine.IdNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.OldMachineNo" class="control-label"></label>
+                <input asp-for="Machine.OldMachineNo" class="form-control" />
+                <span asp-validation-for="Machine.OldMachineNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Machine.OpenForInvoice" class="control-label"></label>
+                <input asp-for="Machine.OpenForInvoice" class="form-control" />
+                <span asp-validation-for="Machine.OpenForInvoice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

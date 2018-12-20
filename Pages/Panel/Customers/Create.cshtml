@@ -1,12 +1,12 @@
 ﻿@page
-@model Resource.Pages.Panel.CRUDs.Customers.EditModel
+@model Resource.Pages.Panel.Customers.CreateModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
     Layout = "~/Pages/Panel/_themeLayout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Create</h2>
 
 <h4>Customer</h4>
 <hr />
@@ -14,16 +14,18 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Customer.ObjNo" />
+            <div class="form-group">
+                <label asp-for="Customer.ObjNo" class="control-label"></label>
+                <input asp-for="Customer.ObjNo" class="form-control" />
+                <span asp-validation-for="Customer.ObjNo" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="Customer.Company" class="control-label"></label>
-                <select asp-for="Customer.Company" class="form-control" asp-items="ViewBag.Company"></select>
-                <span asp-validation-for="Customer.Company" class="text-danger"></span>
+                <select asp-for="Customer.Company" class ="form-control" asp-items="ViewBag.Company"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Customer.Dept" class="control-label"></label>
-                <select asp-for="Customer.Dept" class="form-control" asp-items="ViewBag.Dept"></select>
-                <span asp-validation-for="Customer.Dept" class="text-danger"></span>
+                <select asp-for="Customer.Dept" class ="form-control" asp-items="ViewBag.Dept"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Customer.CustomerNo" class="control-label"></label>
@@ -47,8 +49,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Customer.SalesmanObjNo" class="control-label"></label>
-                <select asp-for="Customer.SalesmanObjNo" class="form-control" asp-items="ViewBag.SalesmanObjNo"></select>
-                <span asp-validation-for="Customer.SalesmanObjNo" class="text-danger"></span>
+                <select asp-for="Customer.SalesmanObjNo" class ="form-control" asp-items="ViewBag.SalesmanObjNo"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Customer.Http" class="control-label"></label>
@@ -87,8 +88,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Customer.CreditTerm" class="control-label"></label>
-                <select asp-for="Customer.CreditTerm" class="form-control" asp-items="ViewBag.CreditTerm"></select>
-                <span asp-validation-for="Customer.CreditTerm" class="text-danger"></span>
+                <select asp-for="Customer.CreditTerm" class ="form-control" asp-items="ViewBag.CreditTerm"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Customer.DeliveryTerm" class="control-label"></label>
@@ -169,11 +169,6 @@
                 <label asp-for="Customer.Established" class="control-label"></label>
                 <input asp-for="Customer.Established" class="form-control" />
                 <span asp-validation-for="Customer.Established" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Status" class="control-label"></label>
-                <input asp-for="Customer.Status" class="form-control" />
-                <span asp-validation-for="Customer.Status" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Customer.Information" class="control-label"></label>
@@ -321,14 +316,14 @@
                 <span asp-validation-for="Customer.CustomerNotes" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="/Panel/Tables/Customers">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Resource.Models;
 
-namespace Resource.Pages.Panel.CRUDs.Customers
+namespace Resource.Pages.Panel.Customers
 {
     public class CreateModel : PageModel
     {

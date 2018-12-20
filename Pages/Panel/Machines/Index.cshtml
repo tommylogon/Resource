@@ -1,0 +1,307 @@
+﻿@page
+@model Resource.Pages.Panel.Machines.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Panel/_themeLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].MachineNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].RevNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].PhoneNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].FaxNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InstallationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Node)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Sortgroup1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Sortgroup2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Sortgroup3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Sortgroup4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Sortgroup5)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ActiveFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ActiveTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Information)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InvoiceReference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ResponseTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ObjDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ServicesCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InactiveText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InstallationNode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InstallationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InvoiceReferenceManuel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ServiceOrderReference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].PackingSlipText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].CustomerDelObjNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].AddressDelRowNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].InformationAlwaysOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].TechnicianObjNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].RespCustomerObjNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].RemoteAccessAdr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].RemoteAccessType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].CustomerInvObjNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].AddressInvRowNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].RelationMaster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].CustomerWarrantyValidTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].IdNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].OldMachineNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].OpenForInvoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].CompanyNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].CustomerObjNoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Machine[0].ModelObjNoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Machine) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MachineNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaxNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstallationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Node)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sortgroup1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sortgroup2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sortgroup3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sortgroup4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sortgroup5)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Information)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponseTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObjDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServicesCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InactiveText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstallationNode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstallationName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceReferenceManuel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ServiceOrderReference)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackingSlipText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDelObjNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressDelRowNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InformationAlwaysOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TechnicianObjNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RespCustomerObjNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemoteAccessAdr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemoteAccessType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerInvObjNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressInvRowNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RelationMaster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerWarrantyValidTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldMachineNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenForInvoice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address.AddressStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyNavigation.Company1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerObjNoNavigation.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelObjNoNavigation.Company)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ObjNo">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ObjNo">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ObjNo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

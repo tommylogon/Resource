@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Resource.Models;
 
-namespace Resource.Pages.Panel.CRUDs.Customers
+namespace Resource.Pages.Panel.Customers
 {
     public class EditModel : PageModel
     {

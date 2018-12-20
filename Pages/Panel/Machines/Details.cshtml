@@ -1,0 +1,296 @@
+﻿@page
+@model Resource.Pages.Panel.Machines.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Panel/_themeLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Machine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.MachineNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.MachineNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.RevNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.RevNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Location)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Location)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.PhoneNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.PhoneNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.FaxNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.FaxNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InstallationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InstallationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Node)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Node)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Sortgroup1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Sortgroup1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Sortgroup2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Sortgroup2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Sortgroup3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Sortgroup3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Sortgroup4)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Sortgroup4)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Sortgroup5)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Sortgroup5)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ActiveFrom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ActiveFrom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ActiveTo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ActiveTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Information)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Information)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InvoiceReference)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InvoiceReference)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ResponseTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ResponseTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ObjDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ObjDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ServicesCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ServicesCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InactiveText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InactiveText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InstallationNode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InstallationNode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InstallationName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InstallationName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InvoiceReferenceManuel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InvoiceReferenceManuel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ServiceOrderReference)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ServiceOrderReference)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.PackingSlipText)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.PackingSlipText)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.CustomerDelObjNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.CustomerDelObjNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.AddressDelRowNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.AddressDelRowNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.InformationAlwaysOn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.InformationAlwaysOn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.TechnicianObjNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.TechnicianObjNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.RespCustomerObjNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.RespCustomerObjNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.RemoteAccessAdr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.RemoteAccessAdr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.RemoteAccessType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.RemoteAccessType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.CustomerInvObjNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.CustomerInvObjNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.AddressInvRowNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.AddressInvRowNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.RelationMaster)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.RelationMaster)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.CustomerWarrantyValidTo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.CustomerWarrantyValidTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.IdNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.IdNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.OldMachineNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.OldMachineNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.OpenForInvoice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.OpenForInvoice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Address.AddressStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.CompanyNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.CompanyNavigation.Company1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.CustomerObjNoNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.CustomerObjNoNavigation.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Department.Company)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.ModelObjNoNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.ModelObjNoNavigation.Company)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Machine.ObjNo">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

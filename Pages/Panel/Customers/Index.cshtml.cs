@@ -1,23 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
-using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Resource.Models;
 
-namespace Resource.Pages.Panel
+namespace Resource.Pages.Panel.Customers
 {
-    public class CustomersModel : PageModel
+    public class IndexModel : PageModel
     {
-        public string Table = "Customer";
         private readonly Resource.Models.EvaticContext _context;
 
-        public CustomersModel(EvaticContext context)
+        public IndexModel(Resource.Models.EvaticContext context)
         {
             _context = context;
         }
@@ -26,15 +22,11 @@ namespace Resource.Pages.Panel
 
         public async Task OnGetAsync()
         {
-            using (_context)
-            {
-                Customer = await _context.Customer.Take(100).ToListAsync();
-            }
-        }
-
-        public void Dispose()
-        {
-            GC.Collect();
+            Customer = await _context.Customer
+                .Include(c => c.CompanyNavigation)
+                .Include(c => c.CreditTermNavigation)
+                .Include(c => c.Department)
+                .Include(c => c.SalesmanObjNoNavigation).ToListAsync();
         }
     }
 }

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Resource.Models;
 
-namespace Resource.Pages.Panel.CRUDs.Customers
+namespace Resource.Pages.Panel.Machines
 {
     public class IndexModel : PageModel
     {
@@ -18,15 +18,16 @@ namespace Resource.Pages.Panel.CRUDs.Customers
             _context = context;
         }
 
-        public IList<Customer> Customer { get;set; }
+        public IList<Machine> Machine { get;set; }
 
         public async Task OnGetAsync()
         {
-            Customer = await _context.Customer
-                .Include(c => c.CompanyNavigation)
-                .Include(c => c.CreditTermNavigation)
-                .Include(c => c.Department)
-                .Include(c => c.SalesmanObjNoNavigation).ToListAsync();
+            Machine = await _context.Machine
+                .Include(m => m.Address)
+                .Include(m => m.CompanyNavigation)
+                .Include(m => m.CustomerObjNoNavigation)
+                .Include(m => m.Department)
+                .Include(m => m.ModelObjNoNavigation).ToListAsync();
         }
     }
 }

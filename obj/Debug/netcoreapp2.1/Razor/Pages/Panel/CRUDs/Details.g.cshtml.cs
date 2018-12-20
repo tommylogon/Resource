@@ -116,7 +116,7 @@ using Resource;
             WriteLiteral("            </dl>\r\n        </div>\r\n        <div>\r\n            <ul>\r\n                <li>");
             EndContext();
             BeginContext(1150, 125, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3f8e07c791f4cd9b9226a8180f6865d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fd7d822352e46959fed30e56289383d", async() => {
                 BeginContext(1267, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -160,7 +160,7 @@ using Resource;
             WriteLiteral("</li>\r\n                <li> ");
             EndContext();
             BeginContext(1303, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d93518ae4924b2cbb954c43598c87db", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee993f66912e4c51a9fe74076778725f", async() => {
                 BeginContext(1348, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();
@@ -190,7 +190,7 @@ using Resource;
             WriteLiteral("</li>\r\n                <li>");
             EndContext();
             BeginContext(1391, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9f05807f4034f1b9d8ce6212f74a46e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e4819a5471d74a1886f24640860fccf9", async() => {
                 BeginContext(1418, 13, true);
                 WriteLiteral("Back to Panel");
                 EndContext();

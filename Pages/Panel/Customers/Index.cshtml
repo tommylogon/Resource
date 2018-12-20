@@ -23,9 +23,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].CustomerName)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].InvCustomerObjNo)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].Http)
             </th>
@@ -35,33 +33,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].Sortgroup1)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Sortgroup2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Sortgroup3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Sortgroup4)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Sortgroup5)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].DeliveryTerm)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].MeansOfDelivery)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].CreditLimit)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].FixedDiscount)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].InvoiceTax)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].PriceList)
             </th>
@@ -84,16 +60,64 @@
                 @Html.DisplayNameFor(model => model.Customer[0].CalculateInterest)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Employees)
+                @Html.DisplayNameFor(model => model.Customer[0].Status)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer[0].BusinessCode)
+                @Html.DisplayNameFor(model => model.Customer[0].Information)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Sales)
+                @Html.DisplayNameFor(model => model.Customer[0].InvoiceFee)
+            </th>
+
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerNo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Established)
+                @Html.DisplayNameFor(model => model.Customer[0].SearchName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CustomerName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Http)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].OrganizationNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Sortgroup1)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CreditLimit)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].PriceList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].OpenForInvoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CalculateVat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ObjDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].GenerateRemainder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].CalculateInterest)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].Status)
@@ -104,294 +128,79 @@
             <th>
                 @Html.DisplayNameFor(model => model.Customer[0].InvoiceFee)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].BankId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].BankName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].AccountNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerName2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerName3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerName4)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].EMail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].InformationAlwaysOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].XmlFormatOrderLineGroup)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].MakeXmlFileOfInvoice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].VatCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].AmalgamateOrders)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].InvCustomerAddressRowNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerLink)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].MainOfficeCustomerObjNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].WebPassword)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SupportMandatoryContact)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SupportMandatoryPhone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SupportMandatoryEmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SupportMandatoryPhoneOrEmail)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SupportClockPausedTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].HideInstallationNode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].PaymentType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].NotAllowPartlyDeliver)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].ExternalSystemKey)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CustomerNotes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CompanyNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].CreditTermNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].Department)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer[0].SalesmanObjNoNavigation)
-            </th>
-            <th></th>
+
+            <th>Manage</th>
         </tr>
-    </thead>
+    </tfoot>
     <tbody>
-@foreach (var item in Model.Customer) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SearchName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvCustomerObjNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Http)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrganizationNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sortgroup1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sortgroup2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sortgroup3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sortgroup4)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sortgroup5)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeliveryTerm)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MeansOfDelivery)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreditLimit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FixedDiscount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvoiceTax)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PriceList)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OpenForInvoice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CalculateVat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ObjDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Username)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GenerateRemainder)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CalculateInterest)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employees)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BusinessCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sales)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Established)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Information)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvoiceFee)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BankId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BankName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AccountNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName4)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EMail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InformationAlwaysOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.XmlFormatOrderLineGroup)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MakeXmlFileOfInvoice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.VatCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AmalgamateOrders)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.InvCustomerAddressRowNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerLink)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MainOfficeCustomerObjNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WebPassword)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupportMandatoryContact)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupportMandatoryPhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupportMandatoryEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupportMandatoryPhoneOrEmail)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupportClockPausedTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HideInstallationNode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NotAllowPartlyDeliver)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExternalSystemKey)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerNotes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CompanyNavigation.Company1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreditTermNavigation.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Department.Company)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SalesmanObjNoNavigation.Company)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ObjNo">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ObjNo">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ObjNo">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Customer)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SearchName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Http)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrganizationNo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditLimit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FixedDiscount)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PriceList)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OpenForInvoice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CalculateVat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ObjDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Username)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GenerateRemainder)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CalculateInterest)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Information)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InvoiceFee)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMail)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ObjNo">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ObjNo">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ObjNo">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -28,7 +28,7 @@ namespace Resource.Pages.Panel
         {
             using (_context)
             {
-                Customer = await _context.Customer.Take(100).ToListAsync();
+                Customer = await _context.Customer.ToListAsync();
             }
         }
 

@@ -16,14 +16,16 @@
         </li>
         <li class="breadcrumb-item active">Tables</li>
     </ol>
-
+    
     <!-- DataTables Example -->
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example
+            <p>
+                <a asp-page="/Panel/Customers/Create">Create New customer</a>
+            </p>
         </div>
-        <div class="card-body">
+        <div class="card-body col-8">
             <div class="table-responsive">
                 <table class="table table-bordered" id="CustomerTable" width="100%" cellspacing="0">
                     <thead>
@@ -38,23 +40,26 @@
                                 @Html.DisplayNameFor(model => model.Customer[0].SearchName)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Customer[0].CustomerName)
+                                Manage
+                            </th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Customer[0].ObjNo)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Customer[0].Http)
+                                @Html.DisplayNameFor(model => model.Customer[0].CustomerNo)
                             </th>
                             <th>
-                                @Html.DisplayNameFor(model => model.Customer[0].OrganizationNo)
-                            </th>
-
-                            <th>
-                                @Html.DisplayNameFor(model => model.Customer[0].EMail)
+                                @Html.DisplayNameFor(model => model.Customer[0].SearchName)
                             </th>
                             <th>
                                 Manage
                             </th>
                         </tr>
-                    </thead>
+                    </tfoot>
                     <tbody>
                         @foreach (var item in Model.Customer)
                         {
@@ -69,22 +74,9 @@
                                     @Html.DisplayFor(modelItem => item.SearchName)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.CustomerName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Http)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.OrganizationNo)
-                                </td>
-
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.EMail)
-                                </td>
-                                <td>
-                                    <a asp-page="/Panel/CRUDs/Customers/Edit" asp-route-id="@item.ObjNo">Edit</a> |
-                                    <a asp-page="/Panel/CRUDs/Customers/Details" asp-route-id="@item.ObjNo">Details</a> |
-                                    <a asp-page="/Panel/CRUDs/Customers/Delete" asp-route-id="@item.ObjNo">Delete</a>
+                                    <a asp-page="/Panel/Customers/Edit" asp-route-id="@item.ObjNo">Edit</a> |
+                                    <a asp-page="/Panel/Customers/Details" asp-route-id="@item.ObjNo">Details</a> |
+                                    <a asp-page="/Panel/Customers/Delete" asp-route-id="@item.ObjNo">Delete</a>
                                 </td>
                             </tr>
                         }
@@ -95,3 +87,4 @@
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
     </div>
 </div>
+

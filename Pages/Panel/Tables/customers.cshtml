@@ -82,61 +82,14 @@
                                     @Html.DisplayFor(modelItem => item.EMail)
                                 </td>
                                 <td>
-                                    <a asp-page="./Edit" asp-route-id="@item.ObjNo">Edit</a> |
-                                    <a asp-page="./Details" asp-route-id="@item.ObjNo">Details</a> |
-                                    <a asp-page="./Delete" asp-route-id="@item.ObjNo">Delete</a>
+                                    <a asp-page="/Panel/CRUDs/Customers/Edit" asp-route-id="@item.ObjNo">Edit</a> |
+                                    <a asp-page="/Panel/CRUDs/Customers/Details" asp-route-id="@item.ObjNo">Details</a> |
+                                    <a asp-page="/Panel/CRUDs/Customers/Delete" asp-route-id="@item.ObjNo">Delete</a>
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
-
-                @*<table class="table table-bordered" id="CustomerTable" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-                                @foreach (var property in Model.properties)
-                                {
-                                    <th>
-                                        @Html.DisplayFor(model => property.Name)
-                                    </th>
-                                }
-                                <th>
-                                    CRUD
-                                </th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                @foreach (var property in Model.properties)
-                                {
-                                    <th>
-                                        @Html.DisplayFor(model => property.Name)
-                                    </th>
-                                }
-                                <th>
-                                    CRUD
-                                </th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            @foreach (var customer in Model.customers)
-                            {
-                                <tr>
-                                    @foreach (var property in Model.properties)
-                                    {
-                                        <td>
-                                            @Html.DisplayFor(modelItem => property.GetValue(customer))
-                                        </td>
-                                    }
-                                    <td>
-                                        <a asp-page="../CRUDs/Update" asp-route-id="@customer.ObjNo" asp-route-table="@Model.Table">Edit</a> |
-                                        <a asp-page="../CRUDs/Details" asp-route-id="@customer.ObjNo" asp-route-table="@Model.Table">Details</a> |
-                                        <a asp-page="../CRUDs/Delete" asp-route-id="@customer.ObjNo" asp-route-table="@Model.Table">Delete</a>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>*@
             </div>
         </div>
         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>

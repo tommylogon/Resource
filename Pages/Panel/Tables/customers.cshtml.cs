@@ -14,17 +14,8 @@ namespace Resource.Pages.Panel
 {
     public class CustomersModel : PageModel
     {
-        public int IndexOfCustomerID = 0;
-
-        public List<Tuple<int, List<string>, List<string>>> Row;
-
-        public List<Customer> customers;
-
-        public List<PropertyInfo> properties;
-
         public string Table = "Customer";
-
-        private readonly EvaticContext _context;
+        private readonly Resource.Models.EvaticContext _context;
 
         public CustomersModel(EvaticContext context)
         {
@@ -35,19 +26,15 @@ namespace Resource.Pages.Panel
 
         public async Task OnGetAsync()
         {
-            Customer = await _context.Customer.ToListAsync();
+            using (_context)
+            {
+                Customer = await _context.Customer.ToListAsync();
+            }
         }
 
-        //public async Task OnGetAsync(string searchString)
-        //{
-        //    using (var context = new EvaticContext())
-        //    {
-        //        customers = context.Customer.ToList();
-
-        //    }
-
-        //    //DataAccessLayer dataAccess = new DataAccessLayer();
-        //    //Row = await dataAccess.GetDB_DataAsync("SELECT obj_no, customer_no, Search_Name, Customer_Name, http, E_mail, organization_no, credit_term, credit_limit FROM CUSTOMER");
-        //}
+        public void Dispose()
+        {
+            GC.Collect();
+        }
     }
 }
